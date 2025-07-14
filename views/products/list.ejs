@@ -1,0 +1,15 @@
+<h2>Products</h2>
+<a href="/products/add">Add Product</a>
+<table border="1">
+  <tr>
+    <th>Name</th><th>Description</th><th>Price</th><th>Image</th>
+  </tr>
+  <% products.forEach(product => { %>
+    <tr>
+      <td><%= product.name %></td>
+      <td><%= product.description %></td>
+      <td>₹<%= product.price %></td>
+      <td><img src="<%= product.image %>" width="100" /></td>
+    </tr>
+  <% }); %>
+</table>
