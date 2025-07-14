@@ -1,0 +1,29 @@
+<h2>Products</h2>
+<a href="/products/add">Add Product</a>
+<table border="1">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% products.forEach(product => { %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.description %></td>
+        <td><%= product.price %></td>
+        <td>
+          <% if (product.image) { %>
+            <img src="<%= product.image %>" width="100">
+          <% } else { %>
+            No image
+          <% } %>
+        </td>
+      </tr>
+    <% }); %>
+  </tbody>
+</table>
+<a href="/">Home</a>
